@@ -1,0 +1,8 @@
+language: python
+python:
+  - 2.7
+  - 3.3
+  - 3.4
+  - pypy
+install: pip install -r requirements.txt && pip install -r test-requirements.txt
+script: python tests.py && flake8 giferror.py && flake8 tests.py
